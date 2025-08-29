@@ -6,12 +6,12 @@ class Solution {
         int index=-1;
         while(start<=end){
             int mid=(start+end)/2;
-            if(arr[mid]<k){
-                start=mid+1;
-            }else if(arr[mid]>k){
-                end=mid-1;
-            }else{
+            if(arr[mid]==k){
                 index=mid;
+                end=mid-1;
+            }else if(arr[mid]<k){
+                start=mid+1;
+            }else{
                 end=mid-1;
             }
         }
